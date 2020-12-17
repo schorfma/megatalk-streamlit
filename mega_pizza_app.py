@@ -113,7 +113,7 @@ for pizza_id in range(
             pizza
         )
 
-streamlit.header("Make Pizza Order")
+streamlit.header("Make MegaPizza Order")
 
 customer_name = streamlit.text_input("Customer Name")
 

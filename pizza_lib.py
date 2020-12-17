@@ -3,7 +3,6 @@ from math import pi, ceil
 from pathlib import Path
 from typing import Iterable, List, Text, Union
 
-import numpy
 from PIL import Image
 
 class PizzaPart:

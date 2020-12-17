@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="400"
+     height="400">
+  <title>Pizza Crust 20cm</title>
+  <circle
+    cx="170"
+    cy="200"
+    r="20"
+    style="fill: Red; stroke: Salmon; stroke-width: 2px;"
+  />
+  <circle
+    cx="180"
+    cy="150"
+    r="18"
+    style="fill: Red; stroke: Salmon; stroke-width: 2px;"
+  />
+  <circle
+    cx="220"
+    cy="170"
+    r="19"
+    style="fill: Red; stroke: Salmon; stroke-width: 2px;"
+  />
+  <circle
+    cx="220"
+    cy="220"
+    r="17"
+    style="fill: Red; stroke: Salmon; stroke-width: 2px;"
+  />
+  <circle
+    cx="270"
+    cy="190"
+    r="17"
+    style="fill: Red; stroke: Salmon; stroke-width: 2px;"
+  />
+  <circle
+    cx="260"
+    cy="240"
+    r="15"
+    style="fill: Red; stroke: Salmon; stroke-width: 2px;"
+  />
+  <circle
+    cx="210"
+    cy="270"
+    r="18"
+    style="fill: Red; stroke: Salmon; stroke-width: 2px;"
+  />
+  <circle
+    cx="160"
+    cy="250"
+    r="18"
+    style="fill: Red; stroke: Salmon; stroke-width: 2px;"
+  />
+  <circle
+    cx="130"
+    cy="220"
+    r="17"
+    style="fill: Red; stroke: Salmon; stroke-width: 2px;"
+  />
+  <circle
+    cx="120"
+    cy="180"
+    r="16"
+    style="fill: Red; stroke: Salmon; stroke-width: 2px;"
+  />
+  <circle
+    cx="250"
+    cy="140"
+    r="16"
+    style="fill: Red; stroke: Salmon; stroke-width: 2px;"
+  />
+  <circle
+    cx="210"
+    cy="120"
+    r="15"
+    style="fill: Red; stroke: Salmon; stroke-width: 2px;"
+  />
+  <circle
+    cx="140"
+    cy="140"
+    r="15"
+    style="fill: Red; stroke: Salmon; stroke-width: 2px;"
+  />
+</svg>

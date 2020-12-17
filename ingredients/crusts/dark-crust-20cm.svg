@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="400"
+     height="400">
+  <title>Pizza Crust 20cm</title>
+  <defs>
+    <radialGradient
+      id="RadialGradient"
+      fx="60%" fy="30%" r="85%"
+      spreadMethod="pad"
+    >
+      <stop offset="0%"   stop-color="Chocolate" stop-opacity="1"/>
+      <stop offset="100%" stop-color="Brown" stop-opacity="1" />
+    </radialGradient>
+  </defs>
+  <circle
+    cx="200"
+    cy="200"
+    r="100"
+    style="fill: url(#RadialGradient); stroke: SandyBrown; stroke-width: 2px;" />
+</svg>

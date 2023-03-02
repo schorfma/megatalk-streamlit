@@ -7,6 +7,7 @@
 ## Setup
 
 ```sh
-pip install -r requirements.txt
+poetry install
+poetry shell
 streamlit run mega_pizza_app.py
 ```

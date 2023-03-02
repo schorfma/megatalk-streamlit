@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "megatalk-streamlit"
+version = "0.2.0"
+description = "MegaTalk zur Python-Bibliothek Streamlit (17. Dezember 2020)"
+authors = ["Martin Schorfmann <martin@schorfma.de>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://gitlab.com/schorfma/megatalk-streamlit"
+
+packages = [
+    {include = "mega_pizza_app.py"},
+    {include = "pizza_lib.py"},
+]
+include = [
+    "ingredients/*/*.png",
+]
+
+[tool.poetry.dependencies]
+python = "> 3.9.7, < 3.12"
+streamlit = "^1.19.0"
+Pillow = "^9.4.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

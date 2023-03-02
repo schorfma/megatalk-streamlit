@@ -2,7 +2,7 @@
 
 **MegaTalk** zur _Python_-Bibliothek **Streamlit** (17. Dezember 2020)
 
-## [✨ Live Web Application](https://share.streamlit.io/schorfma/megatalk-streamlit/mega_pizza_app.py)
+## [✨ Live Web Application](https://schorfma-megatalk-streamlit-mega-pizza-app-e9rc3d.streamlit.app)
 
 ## Setup
 

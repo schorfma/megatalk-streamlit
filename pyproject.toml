@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "megatalk-streamlit"
-version = "0.2.0"
+version = "0.2.1"
 description = "MegaTalk zur Python-Bibliothek Streamlit (17. Dezember 2020)"
 authors = ["Martin Schorfmann <martin@schorfma.de>"]
 license = "MIT"

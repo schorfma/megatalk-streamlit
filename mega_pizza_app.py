@@ -50,22 +50,29 @@ for pizza_id in range(1, NUMBER_PIZZA_CONFIGURATIONS + 1):
         key=f"pizza_size#{pizza_id}",
     )
 
-    pizza_crust = streamlit.radio(
-        "Select a Crust Type",
-        [crust for crust in PIZZA_CRUSTS if crust.diameter == pizza_size],
-        key=f"pizza_crust#{pizza_id}",
-    )
+    CRUST_COLUMN, SAUCE_COLUMN = streamlit.columns(2)
+    CRUST_PREVIEW_COLUMN, SAUCE_PREVIEW_COLUMN = streamlit.columns(2)
 
-    streamlit.image(pizza_crust.image)
+    with CRUST_COLUMN:
+        pizza_crust = streamlit.radio(
+            "Select a Crust Type",
+            [crust for crust in PIZZA_CRUSTS if crust.diameter == pizza_size],
+            key=f"pizza_crust#{pizza_id}",
+        )
 
-    pizza_sauce = streamlit.radio(
-        "Select a Sauce",
-        [None] + [sauce for sauce in PIZZA_SAUCES if sauce.diameter == pizza_size],
-        key=f"pizza_sauce#{pizza_id}",
-    )
+    with CRUST_PREVIEW_COLUMN:
+        streamlit.image(pizza_crust.image)
 
-    if pizza_sauce:
-        streamlit.image(pizza_sauce.image)
+    with SAUCE_COLUMN:
+        pizza_sauce = streamlit.radio(
+            "Select a Sauce",
+            [None] + [sauce for sauce in PIZZA_SAUCES if sauce.diameter == pizza_size],
+            key=f"pizza_sauce#{pizza_id}",
+        )
+
+    with SAUCE_PREVIEW_COLUMN:
+        if pizza_sauce:
+            streamlit.image(pizza_sauce.image)
 
     pizza_toppings = streamlit.multiselect(
         "Select one or multiple Toppings",
@@ -73,19 +80,27 @@ for pizza_id in range(1, NUMBER_PIZZA_CONFIGURATIONS + 1):
         key=f"pizza_toppings#{pizza_id}",
     )
 
-    for pizza_topping in pizza_toppings:
-        streamlit.image(pizza_topping.image)
+    if pizza_toppings:
+        TOPPING_COLUMNS = streamlit.columns(len(pizza_toppings))
 
-    pizza_name = streamlit.text_input("Pizza Name", key=f"pizza_name#{pizza_id}")
+        for pizza_topping_index, pizza_topping in enumerate(pizza_toppings):
+            with TOPPING_COLUMNS[pizza_topping_index]:
+                streamlit.image(pizza_topping.image)
 
-    pizza_number = streamlit.number_input(
-        "How many?",
-        min_value=1,
-        max_value=12,
-        value=1,
-        step=1,
-        key=f"pizza_number#{pizza_id}",
-    )
+    NAME_COLUMN, NUMBER_COLUMN = streamlit.columns(2)
+
+    with NAME_COLUMN:
+        pizza_name = streamlit.text_input("Pizza Name", key=f"pizza_name#{pizza_id}")
+
+    with NUMBER_COLUMN:
+        pizza_number = streamlit.number_input(
+            "How many?",
+            min_value=1,
+            max_value=12,
+            value=1,
+            step=1,
+            key=f"pizza_number#{pizza_id}",
+        )
 
     for index in range(pizza_number):
         pizza = Pizza(pizza_name, pizza_crust, pizza_sauce, *pizza_toppings)
@@ -107,6 +122,7 @@ PIZZA_ORDER = PizzaOrder(
 )
 
 if streamlit.button(f"Authorize Payment of {PIZZA_ORDER.price:.2f}€"):
+    pizza: Pizza
     for pizza in PIZZA_ORDER:
         streamlit.subheader(pizza.name)
         pizza_progress = streamlit.progress(0)
